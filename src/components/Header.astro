@@ -2,14 +2,14 @@
 import DarkButton from "./Dark_Button.astro"
 import LightButton from "./Light_Button.astro"
 ---
-<div x-data="{ showmenu: false }" class="top-0 left-0 right-0 z-50 bg-[#262626] text-white p-3 lg:p-4">
+<div x-data="{ showmenu: false }" class="top-0 left-0 right-0 z-50 bg-[#1F35FF] text-[#fff] lg:p-4">
     <div id="navbar" class="flex justify-end items-end">
-           <button
+           <!-- <button
       class="dark-mode-hide unstyled-button"
       onclick="toggleDarkMode()"
       aria-label="Skift til dark mode"
-    >
-      <DarkButton />
+    > 
+    <DarkButton />
     </button>
     <button
       class="dark-mode-only unstyled-button"
@@ -17,23 +17,23 @@ import LightButton from "./Light_Button.astro"
       aria-label="Skift til light mode"
     >
       <LightButton />
-    </button>
+    </button> -->
 
         <div id="logo" class="ml-4">
         </div>
         <nav id="desktopmenu" class="hidden lg:block mx-10 -ml-10">
             <ul class="flex flex-row gap-8">
-                <li><a href="#who"><h5 class="transition hover:text-[#53B453]">who am I?</h5></a></li>
-                <li><a href="#whatdoyouget"><h5 class="transition hover:text-[#53B453]">what do you get?</h5></a></li>
-                <li><a href="#whatyougive"><h5 class="transition hover:text-[#53B453]">what can you give me?</h5></a></li>
-                <li><a href="#whyme"><h5 class="transition hover:text-[#53B453]">why me?</h5></a></li>  
-                <li><a href="#letsconnect"><h6 class="transition hover:text-[#53B453]">let's connect!</h6></a></li>
+                <li><a href="#who"><h5 class="transition hover:text-[#000]">who am I?</h5></a></li>
+                <li><a href="#whatdoyouget"><h5 class="transition hover:text-[#000]">what do you get?</h5></a></li>
+                <li><a href="#whatyougive"><h5 class="transition hover:text-[#000]">what am I looking for?</h5></a></li>
+                <li><a href="#whyme"><h5 class="transition hover:text-[#000]">why me?</h5></a></li>  
+                <li><a href="#letsconnect"><h6 class="transition hover:text-[#000]">let's connect!</h6></a></li>
             </ul>
         </nav> 
         <div class="hidden lg:block">
         </div> 
         <button id="burgermenu" class="p-2 lg:hidden" x-on:click="showmenu = ! showmenu">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="1.5" stroke="#53B453" class="w-14 h-14">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="1" stroke="#fff" class="w-10 h-10">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
         </button>
     </div>
@@ -42,11 +42,11 @@ import LightButton from "./Light_Button.astro"
     <nav id="mobilmenu" class="flex flex-col content-center pt-10 pr-16" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul>
-            <li class="text-end py-1"><a href="#who" class="transition "><h5 class="hover:text-[#53B453]">who am I?</h5></a></li>
-            <li class="text-end py-1"><a href="#whatdoyouget" class="transition"><h5 class="hover:text-[#53B453]">what do you get?</h5></a></li>
-            <li class="text-end py-1"><a href="#whatyougive" class="transition"><h5 class="hover:text-[#53B453]">what can you give me?</h5></a></li>
-            <li class="text-end py-1"><a href="#whyme" class="transition"><h5 class="hover:text-[#53B453]">why me?</h5></a></li>  
-            <li class="text-end py-1"><a href="#letsconnect" class="transition"><h6 class="hover:text-[#53B453] font-black">let's connect!</h6></a></li>
+            <li class="text-end py-1"><a href="#who" class="transition "><h5 class="hover:text-[#1F35FF]">who am I?</h5></a></li>
+            <li class="text-end py-1"><a href="#whatdoyouget" class="transition"><h5 class="hover:text-[#1F35FF]">what do you get?</h5></a></li>
+            <li class="text-end py-1"><a href="#whatyougive" class="transition"><h5 class="hover:text-[#1F35FF]">what am I looking for?</h5></a></li>
+            <li class="text-end py-1"><a href="#whyme" class="transition"><h5 class="hover:text-[#1F35FF]">why me?</h5></a></li>  
+            <li class="text-end py-1"><a href="#letsconnect" class="transition"><h6 class="hover:text-[#1F35FF] font-black">let's connect!</h6></a></li>
         </ul>
     </nav>
 </div>
