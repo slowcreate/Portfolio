@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FollowtheArrow from "../components/FollowtheArrow.astro";
+import '../styles/tailwind.css';
+import 'animate.css';
+const { title } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="/favicon_io/site.webmanifest">
+		<meta name="generator" content={Astro.generator} />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body class="bg-[#262626]">
+
+		<header>
+			<Header></Header>
+		</header>
+		
+		<main>
+			
+			<slot />
+		</main>
+
+		<footer class="mt-20 md:mt-0 md:-translate-y-[300px]">
+			<section id="letsconnect">
+				<h1 class="flex flex-col justify-center mb-5">let's connect!</h1>
+			</section>
+			<div class="relative">
+				<svg class="absolute -top-[400px] w-[100px] md:w-[120px] md:-top-[435px] lg:w-[229px]" width="229" height="602" viewBox="0 0 229 602" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M-37.1261 0C-34.3574 14.6121 -29.3637 36.8518 -20.0995 63.5285C18.2389 173.873 69.5652 186.808 100.337 261.789C140.988 360.816 117.107 498.195 146.67 534.831C158.674 549.707 172.735 555.221 172.735 555.221C189.475 561.785 213.225 561.796 213.225 561.796C213.225 561.796 208.247 547.691 198.774 520.873C208.806 536.213 218.84 551.543 228.885 566.886C216.043 578.324 203.187 589.759 190.345 601.197C203.056 580.951 211.233 567.946 211.235 567.935C211.235 567.935 176.735 563.592 155.694 550.015C128.135 532.228 123.435 498.463 120.449 476.956C119.035 466.753 119.13 459.227 119.168 455.842C119.836 390.345 120.348 339.22 103.508 287.627C100.975 279.882 92.9429 256.456 76.034 227.625C51.1075 185.125 29.2196 168.892 7.87946 139.82C-9.72866 115.87 -29.8532 79.2274 -35.94 26.5744C-36.3359 17.7197 -36.7302 8.8547 -37.1261 0Z" fill="white"/>
+				</svg>
+			</div>
+			<Footer></Footer>
+		</footer>
+	</body>
+</html>
