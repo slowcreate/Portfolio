@@ -35,10 +35,10 @@
     @apply font-black uppercase text-xl md:text-3xl;
   }
   h5 {
-    @apply text-lg md:text-xl;
+    @apply text-sm md:text-lg;
   }
   h6 {
-    @apply text-lg md:text-xl;
+    @apply text-sm md:text-lg font-bold;
   }
   p,
   li {
